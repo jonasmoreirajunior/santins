@@ -1,0 +1,25 @@
+.banner {
+    background-image: url('../images/background-hero.png');
+    background-position: center;
+    background-size: cover;
+    height: 810px;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &__title {
+        color: $essential-color;
+        max-width: 550px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        margin-top: 30px;
+        padding: 12px 28px;
+    }
+}

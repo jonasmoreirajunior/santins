@@ -1,0 +1,27 @@
+.btn {
+    @include remove-apparence-button;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    color: $essential-color;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 22px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+
+    &-primary {
+        background-color: $green;
+
+        &:hover {
+            background-color: transparent;
+            border-color: $green;
+            color: $green;
+        }
+
+        &--o {
+            background-color: transparent;
+            border-color: $green;
+        }
+    }
+}

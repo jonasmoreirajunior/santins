@@ -1,0 +1,80 @@
+.newsletter {
+    background-color: $essential-color;
+    box-shadow: 0 -42px 140px 0 rgba(0,0,0,0.1);
+    left: 50%;
+    max-width: 1290px;
+    padding-block: 64px 72px;
+    position: absolute;
+    text-align: center;
+    top: -140px;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @include responsive-tablet {
+        position: relative;
+        top: unset;
+    }
+
+    &__title {
+        color: $dark-blue;
+        margin-bottom: 42px;
+    }
+
+    &__form {
+        margin: 0 auto;
+        max-width: 750px;
+        position: relative;
+        width: 100%;
+
+        @include responsive-tablet {
+            max-width: 650px;
+        }
+
+        @include responsive-mobile {
+            max-width: 420px;
+        }
+
+        input[type="email"] {
+            border-radius: 60px;
+            border: 1px solid #E0E0E0;
+            color: $grey;
+            font-size: 16px;
+            font-weight: 400;
+            height: 60px;
+            outline: none;
+            padding-left: 30px;
+            width: 100%;
+
+            @include responsive-mobile {
+                width: 300px;
+            }
+        }
+
+        button {
+            @include remove-apparence-button;
+            background-color: $green;
+            border-bottom-right-radius: 60px;
+            border-top-right-radius: 60px;
+            bottom: 0;
+            color: $essential-color;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: (25/16);
+            max-width: 262px;
+            position: absolute;
+            right: -32px;
+            top: 0;
+            width: 100%;
+
+            @include responsive-mobile {
+                border-radius: 60px;
+                height: 60px;
+                margin-top: 20px;
+                max-width: 220px;
+                position: relative;
+                right: unset;
+                width: 100%;
+            }
+        }
+    }
+}

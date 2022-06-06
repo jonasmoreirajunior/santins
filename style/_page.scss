@@ -1,0 +1,24 @@
+.page {
+    &__header {
+        &.fixed {
+            background-color: $dark-blue;
+            height: 115px;
+            position: fixed;
+            width: 100%;
+            z-index: 15;
+
+            @include responsive-tablet {
+                height: unset;
+                padding: 20px 20px;
+            }
+        }
+
+        @include responsive-tablet {
+            background-color: $essential-color;
+            padding: 20px 20px;
+            position: fixed;
+            width: 100%;
+            z-index: 15;
+        }
+    }
+}

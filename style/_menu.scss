@@ -1,0 +1,131 @@
+// Animation Menu Mobile
+
+@keyframes fadeInMenu {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    max-width: 1280px;
+    padding-inline: 23px;
+    position: absolute;
+    top: 27px;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 10;
+
+    @include responsive-tablet {
+        left: unset;
+        padding-inline: unset;
+        position: relative;
+        top: unset;
+        transform: unset;
+    }
+
+    &__links {
+        align-items: center;
+        display: flex;
+        @include responsive-tablet {
+            display: none;
+        }
+
+        &.visible {
+            animation: fadeInMenu ease-in-out 0.5s;
+            background-color: $dark-blue;
+            bottom: 0;
+            display: block;
+            left: 0;
+            padding: 100px 50px;
+            position: fixed;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-size: 14px;
+        font-weight: 600;
+
+        a {
+            @include remove-apparence-link;
+        }
+    }
+
+    &__link {
+        color: $essential-color;
+        text-transform: uppercase;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: $green;
+        }
+
+        &:not(:last-of-type) {
+            margin-right: 35px;
+
+            @include responsive-tablet {
+                margin-right: unset;
+            }
+        }
+
+        &:last-of-type {
+            margin-right: 28px;
+
+            @include responsive-tablet {
+                margin-right: unset;
+            }
+        }
+
+        @include responsive-tablet {
+            display: block;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+
+    &__button {
+        @include responsive-tablet {
+            width: 100%;
+        }
+
+        &:first-of-type {
+            margin-right: 13px;
+
+            @include responsive-tablet {
+                margin-bottom: 20px;
+                margin-right: unset;
+            }
+        }
+    }
+
+    &__mobile {
+        @include remove-apparence-button;
+        display: none;
+        position: fixed;
+        right: 35px;
+        z-index: 15;
+
+        @include responsive-tablet {
+            display: block;
+        }
+
+        svg {
+            fill: $green;
+            height: 45px;
+            width: 45px;
+        }
+    }
+}

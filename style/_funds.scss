@@ -115,9 +115,13 @@
         width: 50px;
     }
 
-    .btn {
+    &__button {
+        @include remove-apparence-list;
         align-self: center;
+        color: $essential-color;
+        display: block;
         margin-top: 45px;
         padding: 12px 27px;
+        width: max-content;
     }
 }

@@ -27,6 +27,7 @@ body {
 	font-family: 'Montserrat';
 	font-size: 14px;
 	font-weight: 600;
+	letter-spacing: 1px;
 	padding: 15px 22px;
 	text-transform: uppercase;
 	transition: all 0.2s ease;
@@ -152,6 +153,7 @@ body {
 .banner {
 	background-image: url("../images/background-hero.png");
 	background-position: center;
+	background-repeat: no-repeat;
 	background-size: cover;
 	height: 810px;
 	position: relative;
@@ -171,8 +173,13 @@ body {
 }
 
 .banner__button {
+	color: inherit;
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
 	margin-top: 30px;
 	padding: 12px 28px;
+	width: max-content;
 }
 
 @keyframes fadeInMenu {
@@ -400,7 +407,13 @@ body {
 }
 
 .a-empresa__button {
+	color: inherit;
+	text-decoration: none;
+	color: #ffffff;
+	display: block;
 	margin-top: 50px;
+	padding: 13px 26px;
+	width: max-content;
 }
 
 .numbers {
@@ -602,10 +615,17 @@ body {
 	width: 50px;
 }
 
-.funds-content .btn {
+.funds-content__button {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
 	align-self: center;
+	color: #ffffff;
+	display: block;
 	margin-top: 45px;
 	padding: 12px 27px;
+	width: max-content;
 }
 
 .newsletter {

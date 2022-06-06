@@ -66,6 +66,11 @@
     }
 
     &__button {
+        @include remove-apparence-link;
+        color: $essential-color;
+        display: block;
         margin-top: 50px;
+        padding: 13px 26px;
+        width: max-content;
     }
 }

@@ -26,6 +26,10 @@
         font-weight: 700;
         line-height: (60/50);
         text-align: center;
+
+        @include responsive-mobile {
+            width: 100%;
+        }
     }
 
     &__info {

@@ -9,7 +9,7 @@
     position: relative;
 
     @include responsive-tablet {
-        padding-block-start: 80px;
+        padding-block-start: 0px;
     }
 
     .container {
@@ -111,6 +111,7 @@
         padding-block-start: 80px;
 
         @include responsive-tablet {
+            padding-inline: 20px;
             text-align: center;
         }
 

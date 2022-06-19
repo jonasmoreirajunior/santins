@@ -19,13 +19,10 @@
         width: 100%;
 
         @include responsive-tablet {
+            display: table-cell;
             height: unset;
             max-width: unset;
-            padding-inline: unset;
-
-            .text {
-                padding-inline: 20px;
-            }
+            padding-inline: 20px;
         }
     }
 
@@ -57,10 +54,6 @@
         margin-bottom: 20px;
         margin-right: 11px;
 
-        @include responsive-tablet {
-            padding-inline-start: 20px;
-        }
-
         &::before {
             border: $green solid 3px;
             content: '';
@@ -78,7 +71,7 @@
 
         @include responsive-tablet {
             max-width: unset;
-            padding: 10px;
+            padding-inline: 20px;
             text-align: center;
         }
     }
@@ -91,18 +84,25 @@
     padding-block-start: 150px;
 
     @include responsive-tablet {
-        padding-block-end: 80px;
-        padding-block-start: 80px;
+        padding-block: 80px;
     }
 
     &__container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 45px 105px;
+
+        @include responsive-tablet {
+            padding-inline: 20px;
+        }
     }
 
     &__body {
         padding-right: 50px;
+
+        @include responsive-mobile {
+            padding-right: unset;
+        }
 
         .subtitle {
             padding-block: 16px;

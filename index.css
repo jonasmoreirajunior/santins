@@ -7,11 +7,16 @@
 .container {
 	margin: 0 auto;
 	max-width: 1280px;
-	padding-inline: 23px;
+	width: 100%;
 }
 
 body {
+	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+	max-width: 90px;
 }
 
 .btn {
@@ -155,7 +160,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 810px;
+	height: 100vh;
 	position: relative;
 }
 
@@ -163,6 +168,12 @@ body {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1279px) {
+	.banner__content {
+		padding-inline-start: 20px;
+	}
 }
 
 .banner__title {
@@ -258,7 +269,7 @@ body {
 	transition: color 0.2s ease;
 }
 
-.menu__link:hover {
+.menu__link:hover, .menu__link.active {
 	color: #56D7AF;
 }
 
@@ -454,6 +465,12 @@ body {
 	text-align: center;
 }
 
+@media screen and (max-width: 780px) {
+	.numbers__item {
+		width: 100%;
+	}
+}
+
 .numbers__info {
 	margin-bottom: 20px;
 	padding-bottom: 10px;
@@ -512,11 +529,9 @@ body {
 
 @media screen and (max-width: 1279px) {
 	.funds-header__content-left {
+		display: table-cell;
 		height: unset;
 		max-width: unset;
-		padding-inline: unset;
-	}
-	.funds-header__content-left .text {
 		padding-inline: 20px;
 	}
 }
@@ -552,12 +567,6 @@ body {
 	margin-right: 11px;
 }
 
-@media screen and (max-width: 1279px) {
-	.funds-header__title {
-		padding-inline-start: 20px;
-	}
-}
-
 .funds-header__title::before {
 	border: #56D7AF solid 3px;
 	content: '';
@@ -576,7 +585,7 @@ body {
 @media screen and (max-width: 1279px) {
 	.funds-header__text-right {
 		max-width: unset;
-		padding: 10px;
+		padding-inline: 20px;
 		text-align: center;
 	}
 }
@@ -590,19 +599,30 @@ body {
 
 @media screen and (max-width: 1279px) {
 	.funds-content {
-		padding-block-end: 80px;
-		padding-block-start: 80px;
+		padding-block: 80px;
 	}
 }
 
 .funds-content__container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	gap: 45px 105px;
+}
+
+@media screen and (max-width: 1279px) {
+	.funds-content__container {
+		padding-inline: 20px;
+	}
 }
 
 .funds-content__body {
 	padding-right: 50px;
+}
+
+@media screen and (max-width: 780px) {
+	.funds-content__body {
+		padding-right: unset;
+	}
 }
 
 .funds-content__body .subtitle {
@@ -737,7 +757,7 @@ body {
 
 @media screen and (max-width: 1279px) {
 	.footer {
-		padding-block-start: 80px;
+		padding-block-start: 0px;
 	}
 }
 
@@ -855,6 +875,7 @@ body {
 
 @media screen and (max-width: 1279px) {
 	.footer__right {
+		padding-inline: 20px;
 		text-align: center;
 	}
 }
